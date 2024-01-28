@@ -1,15 +1,14 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
-import ForgotPassword from './pages/Authentication/ForgotPassword';
-import Loader from './common/Loader';
-import routes from './routes';
-import CheckAuth from './utils/checkAuth';
-import ResetPassword from './pages/Authentication/ResetPassword';
-import EmailVerification from './pages/Authentication/EmailVerification';
-const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
+import { Suspense, lazy, useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import SignIn from "./pages/Authentication/SignIn";
+import SignUp from "./pages/Authentication/SignUp";
+import ForgotPassword from "./pages/Authentication/ForgotPassword";
+import Loader from "./common/Loader";
+import routes from "./routes";
+import ResetPassword from "./pages/Authentication/ResetPassword";
+import EmailVerification from "./pages/Authentication/EmailVerification";
+const DefaultLayout = lazy(() => import("./layout/DefaultLayout"));
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -35,13 +34,7 @@ function App() {
         <Route path="/resetpassword/*" element={<ResetPassword />} />
         <Route path="/verify-email/*" element={<EmailVerification />} />
 
-        <Route
-          element={
-            <CheckAuth>
-              <DefaultLayout />
-            </CheckAuth>
-          }
-        >
+        <Route element={<DefaultLayout />}>
           {routes &&
             routes?.map((routes, index) => {
               const { path, component: Component } = routes;
