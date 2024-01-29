@@ -16,7 +16,9 @@ const RightPanel = () => {
         </button>
       </div>
       <div className="w-full h-fit px-4 py-4 flex hover:cursor-pointer border gap-4 border-[#98a8e2] flex-col">
-        <span className="text-4xl font-semibold text-white">Username</span>
+        <span className="font-semibold text-white 2xl:text-4xl md:text-xl text-lg">
+          Username
+        </span>
         <input
           type="text"
           className="w-full px-2 py-1 bg-black text-white text-13px font-normal text-end outline-none rounded-[6px]"
@@ -25,7 +27,9 @@ const RightPanel = () => {
         ></input>
       </div>
       <div className="w-full h-fit px-4 py-4 flex hover:cursor-pointer border gap-4 rounded-b-lg border-[#98a8e2] flex-col">
-        <span className="text-4xl font-semibold text-white">Password</span>
+        <span className="font-semibold text-white 2xl:text-4xl md:text-xl text-lg">
+          Password
+        </span>
         <input
           type="password"
           className="w-full px-2 py-1 bg-black text-white text-13px font-normal text-end outline-none rounded-[6px]"
