@@ -3,7 +3,7 @@ import Logo from "../images/logo/logo.png";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none justify-center">
       <div className="flex flex-grow items-center justify-between py-5 px-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 ">
           <button
@@ -28,6 +28,9 @@ const Header = () => {
           <Link className="block flex-shrink-0 lg:hidden" to="/">
             <img src={Logo} alt="Logo" className="w-8 h-8" />
           </Link>
+        </div>
+        <div className="w-full justify-center flex text-4xl text-black-2">
+          USB CAMERA LIVE STREAM
         </div>
       </div>
     </header>
